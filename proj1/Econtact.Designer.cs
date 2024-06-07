@@ -44,14 +44,14 @@
             btnUpdate = new Button();
             btnClear = new Button();
             btnDelete = new Button();
-            dataGridView1 = new DataGridView();
+            dgvContactList = new DataGridView();
             lblSearch = new Label();
             txtSearch = new TextBox();
             picEcontact = new PictureBox();
             picClose = new PictureBox();
             lblContact = new Label();
             lblContactno = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContactList).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picEcontact).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
             SuspendLayout();
@@ -72,16 +72,18 @@
             // 
             txtContactId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContactId.Location = new Point(252, 199);
-            txtContactId.Margin = new Padding(4, 4, 4, 4);
+            txtContactId.Margin = new Padding(4);
             txtContactId.Name = "txtContactId";
+            txtContactId.ReadOnly = true;
             txtContactId.Size = new Size(280, 34);
             txtContactId.TabIndex = 2;
+            txtContactId.Click += txtContactId_TextChanged;
             // 
             // txtFirstname
             // 
             txtFirstname.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFirstname.Location = new Point(252, 249);
-            txtFirstname.Margin = new Padding(4, 4, 4, 4);
+            txtFirstname.Margin = new Padding(4);
             txtFirstname.Name = "txtFirstname";
             txtFirstname.Size = new Size(280, 34);
             txtFirstname.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             txtLastname.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtLastname.Location = new Point(252, 299);
-            txtLastname.Margin = new Padding(4, 4, 4, 4);
+            txtLastname.Margin = new Padding(4);
             txtLastname.Name = "txtLastname";
             txtLastname.Size = new Size(280, 34);
             txtLastname.TabIndex = 6;
@@ -123,7 +125,7 @@
             // 
             txtContactno.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContactno.Location = new Point(252, 349);
-            txtContactno.Margin = new Padding(4, 4, 4, 4);
+            txtContactno.Margin = new Padding(4);
             txtContactno.Name = "txtContactno";
             txtContactno.Size = new Size(280, 34);
             txtContactno.TabIndex = 8;
@@ -132,7 +134,7 @@
             // 
             txtAddress.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtAddress.Location = new Point(252, 399);
-            txtAddress.Margin = new Padding(4, 4, 4, 4);
+            txtAddress.Margin = new Padding(4);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(280, 119);
@@ -168,7 +170,7 @@
             cmbGender.FormattingEnabled = true;
             cmbGender.Items.AddRange(new object[] { "Male", "Female" });
             cmbGender.Location = new Point(252, 526);
-            cmbGender.Margin = new Padding(4, 4, 4, 4);
+            cmbGender.Margin = new Padding(4);
             cmbGender.Name = "cmbGender";
             cmbGender.Size = new Size(188, 36);
             cmbGender.TabIndex = 12;
@@ -178,19 +180,20 @@
             btnAdd.BackColor = Color.MistyRose;
             btnAdd.ForeColor = Color.DarkRed;
             btnAdd.Location = new Point(229, 618);
-            btnAdd.Margin = new Padding(4, 4, 4, 4);
+            btnAdd.Margin = new Padding(4);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(130, 51);
             btnAdd.TabIndex = 13;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
             btnUpdate.BackColor = Color.MistyRose;
             btnUpdate.ForeColor = Color.DarkRed;
             btnUpdate.Location = new Point(420, 618);
-            btnUpdate.Margin = new Padding(4, 4, 4, 4);
+            btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(130, 51);
             btnUpdate.TabIndex = 14;
@@ -202,7 +205,7 @@
             btnClear.BackColor = Color.MistyRose;
             btnClear.ForeColor = Color.DarkRed;
             btnClear.Location = new Point(796, 618);
-            btnClear.Margin = new Padding(4, 4, 4, 4);
+            btnClear.Margin = new Padding(4);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(130, 51);
             btnClear.TabIndex = 16;
@@ -214,22 +217,22 @@
             btnDelete.BackColor = Color.MistyRose;
             btnDelete.ForeColor = Color.DarkRed;
             btnDelete.Location = new Point(605, 618);
-            btnDelete.Margin = new Padding(4, 4, 4, 4);
+            btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(130, 51);
             btnDelete.TabIndex = 15;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvContactList
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(569, 249);
-            dataGridView1.Margin = new Padding(4, 4, 4, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(541, 322);
-            dataGridView1.TabIndex = 17;
+            dgvContactList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvContactList.Location = new Point(569, 249);
+            dgvContactList.Margin = new Padding(4);
+            dgvContactList.Name = "dgvContactList";
+            dgvContactList.RowHeadersWidth = 51;
+            dgvContactList.Size = new Size(541, 322);
+            dgvContactList.TabIndex = 17;
             // 
             // lblSearch
             // 
@@ -304,7 +307,7 @@
             Controls.Add(picEcontact);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvContactList);
             Controls.Add(btnClear);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
@@ -322,10 +325,10 @@
             Controls.Add(lblContactId);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "Econtact";
             Text = "Econtact";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvContactList).EndInit();
             ((System.ComponentModel.ISupportInitialize)picEcontact).EndInit();
             ((System.ComponentModel.ISupportInitialize)picClose).EndInit();
             ResumeLayout(false);
@@ -348,7 +351,7 @@
         private Button btnUpdate;
         private Button btnClear;
         private Button btnDelete;
-        private DataGridView dataGridView1;
+        private DataGridView dgvContactList;
         private Label lblSearch;
         private TextBox txtSearch;
         private PictureBox picEcontact;
