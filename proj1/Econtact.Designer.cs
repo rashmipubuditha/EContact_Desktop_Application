@@ -177,8 +177,9 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.MistyRose;
-            btnAdd.ForeColor = Color.DarkRed;
+            btnAdd.BackColor = Color.PaleGreen;
+            btnAdd.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdd.ForeColor = Color.Black;
             btnAdd.Location = new Point(229, 618);
             btnAdd.Margin = new Padding(4);
             btnAdd.Name = "btnAdd";
@@ -190,8 +191,9 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.MistyRose;
-            btnUpdate.ForeColor = Color.DarkRed;
+            btnUpdate.BackColor = Color.Salmon;
+            btnUpdate.Font = new Font("Segoe UI", 13.8F);
+            btnUpdate.ForeColor = Color.Black;
             btnUpdate.Location = new Point(420, 618);
             btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
@@ -203,8 +205,9 @@
             // 
             // btnClear
             // 
-            btnClear.BackColor = Color.MistyRose;
-            btnClear.ForeColor = Color.DarkRed;
+            btnClear.BackColor = Color.Khaki;
+            btnClear.Font = new Font("Segoe UI", 13.8F);
+            btnClear.ForeColor = Color.Black;
             btnClear.Location = new Point(796, 618);
             btnClear.Margin = new Padding(4);
             btnClear.Name = "btnClear";
@@ -216,8 +219,9 @@
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.MistyRose;
-            btnDelete.ForeColor = Color.DarkRed;
+            btnDelete.BackColor = Color.DeepSkyBlue;
+            btnDelete.Font = new Font("Segoe UI", 13.8F);
+            btnDelete.ForeColor = Color.Black;
             btnDelete.Location = new Point(605, 618);
             btnDelete.Margin = new Padding(4);
             btnDelete.Name = "btnDelete";
@@ -261,9 +265,9 @@
             // 
             picEcontact.BackColor = Color.Transparent;
             picEcontact.Image = (Image)resources.GetObject("picEcontact.Image");
-            picEcontact.Location = new Point(311, 47);
+            picEcontact.Location = new Point(263, 29);
             picEcontact.Name = "picEcontact";
-            picEcontact.Size = new Size(77, 74);
+            picEcontact.Size = new Size(136, 135);
             picEcontact.SizeMode = PictureBoxSizeMode.StretchImage;
             picEcontact.TabIndex = 20;
             picEcontact.TabStop = false;
@@ -282,11 +286,11 @@
             // lblContact
             // 
             lblContact.AutoSize = true;
-            lblContact.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblContact.ForeColor = Color.Firebrick;
+            lblContact.Font = new Font("Cooper Black", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblContact.ForeColor = Color.Navy;
             lblContact.Location = new Point(419, 47);
             lblContact.Name = "lblContact";
-            lblContact.Size = new Size(347, 74);
+            lblContact.Size = new Size(419, 91);
             lblContact.TabIndex = 22;
             lblContact.Text = "E contact";
             // 
