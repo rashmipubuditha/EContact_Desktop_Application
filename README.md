@@ -68,7 +68,7 @@
             </li>
         </ol>
         <h2>Screenshots</h2>
-        <p><img src="images/interface.png" alt="Main Interface" /></p>
+        <p><img src="screenshots/interface.png" alt="Main Interface" /></p>
         <p><em>Main interface of the Econtact desktop application.</em></p>
         <p>For any questions or suggestions, feel free to reach out to the project maintainer:</p>
         <ul>
