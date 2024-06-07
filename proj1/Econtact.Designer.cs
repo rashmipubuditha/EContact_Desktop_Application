@@ -199,6 +199,7 @@
             btnUpdate.TabIndex = 14;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnClear
             // 
@@ -211,6 +212,7 @@
             btnClear.TabIndex = 16;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
             // 
             // btnDelete
             // 
@@ -223,6 +225,7 @@
             btnDelete.TabIndex = 15;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
             // 
             // dgvContactList
             // 
@@ -233,6 +236,7 @@
             dgvContactList.RowHeadersWidth = 51;
             dgvContactList.Size = new Size(541, 322);
             dgvContactList.TabIndex = 17;
+            dgvContactList.RowHeaderMouseClick += dgvContactList_RowHeaderMouseClick;
             // 
             // lblSearch
             // 
@@ -251,6 +255,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(448, 31);
             txtSearch.TabIndex = 19;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // picEcontact
             // 
@@ -272,6 +277,7 @@
             picClose.SizeMode = PictureBoxSizeMode.StretchImage;
             picClose.TabIndex = 21;
             picClose.TabStop = false;
+            picClose.Click += picClose_Click;
             // 
             // lblContact
             // 
@@ -328,6 +334,7 @@
             Margin = new Padding(4);
             Name = "Econtact";
             Text = "Econtact";
+            Load += Econtact_Load;
             ((System.ComponentModel.ISupportInitialize)dgvContactList).EndInit();
             ((System.ComponentModel.ISupportInitialize)picEcontact).EndInit();
             ((System.ComponentModel.ISupportInitialize)picClose).EndInit();

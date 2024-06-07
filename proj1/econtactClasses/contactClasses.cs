@@ -103,8 +103,6 @@ namespace proj1.econtactClasses
         public bool Update(contactClasses c) { 
             bool isSuccess = false;
             MySqlConnection conn = new MySqlConnection(myconstring);
-            return isSuccess;
-
             try
             {
                 // mysql to update data in my databse
@@ -119,6 +117,7 @@ namespace proj1.econtactClasses
                 cmd.Parameters.AddWithValue("@Contact_ID", c.ContactID);
 
                 //open database connection
+                conn.Open();
                 int rows = cmd.ExecuteNonQuery();
 
                 // if the query runs successfully the the value of rows will be greater than 0  else it will be 0
@@ -151,7 +150,7 @@ namespace proj1.econtactClasses
             MySqlConnection conn = new MySqlConnection(myconstring);
             try
             {
-                string sql = "DELETE FROM details WHERE Contacat_ID = @Contact_ID";
+                string sql = "DELETE FROM details WHERE Contact_ID = @Contact_ID";
                 
                 // sql command
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -165,11 +164,11 @@ namespace proj1.econtactClasses
                 // if the query run successfully then the value of rows is greate than 0 else its value is 0
                 if(rows > 0)
                 {
-                    isSuccess &= true;
+                    isSuccess = true;
                 }
                 else
                 {
-                    isSuccess |= false;
+                    isSuccess = false;
                 }
 
             }
